@@ -59,7 +59,7 @@ install() {
 	wget -q "https://github.com/tendermint/tendermint/releases/download/v${tendermint_version}/tendermint_${tendermint_version}_linux_amd64.tar.gz"
 	tar -xvf "tendermint_${tendermint_version}_linux_amd64.tar.gz"
 	chmod +x "${temp_dir}tendermint"
-	mv "${temp_dir}tendermint" /usr/bin/tendermint
+	sudo mv "${temp_dir}tendermint" /usr/bin/tendermint
 	cd
 	rm -rf "$temp_dir"
 }
